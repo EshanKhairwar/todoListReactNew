@@ -5,7 +5,6 @@ import Read from "./components/Read";
 
 const App = () => {
   const [todos, setTodos] = useState([
-
   ]);
 
   return (
