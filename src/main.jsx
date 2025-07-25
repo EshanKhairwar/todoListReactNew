@@ -9,7 +9,9 @@ createRoot(document.getElementById("root")).render(
 //     <App />
 //   </>
 <>
-<Wrapper App={<App/>}/>
+<Wrapper>
+<App/>
+</Wrapper>
 <ToastContainer position="top-center" />
 </>
 

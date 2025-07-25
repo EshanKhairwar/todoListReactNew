@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { createContext, useState } from "react";
 
-const Wrapper = ({App}) => {
+export const todocontext = createContext(null);
+
+const Wrapper = (props) => {
+const [todos,setTodos]=useState([
+  {id:1,title:"KKLB",isCompleted:false}
+])
   return (
-    <div>{App}</div>
-  )
-}
+    <todocontext.Provider value={[todos,setTodos]}>
+    
+      {props.children}
+    </todocontext.Provider>
+  );
+};
 
-export default Wrapper
+export default Wrapper;
